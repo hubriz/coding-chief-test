@@ -1,0 +1,96 @@
+/* Thu, 22 June 2023 */
+/* ART DE GUZMAN - Front End Developer */
+/* Updated styling */
+
+/* Hide Main Menu on Mobile View */
+
+main {  
+  max-width: 78%;
+  margin: 0 auto;
+}
+
+.main-menu {
+  position: relative;
+  min-height: 40px;
+}
+
+.main-menu > ul {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.sub-navigation ul {
+  margin: 0 auto;
+  max-width: 80%;
+}
+
+.main-btn { 
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 12px;
+  background: none;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+}
+
+.sub-navigation ul li.active a {
+  background-color: inherit;
+  border-bottom: none;  
+}
+
+@media screen and (max-width: 767px) {
+  
+  header h1 {
+    text-align: left;
+  }
+  .main-menu ul{
+    display: none;
+  }
+  
+  .main-menu ul.open {
+    display: block;
+  }
+  
+  .main-menu ul.open > li {
+    display: block;
+  }
+  
+  .main-menu ul.open > li a {
+    text-align: center;
+    
+  }
+  
+  .main-btn {
+    display: block;
+  }
+  
+  .sub-navigation {
+    display: block; 
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  
+  .sub-navigation ul {
+    display: block !important;
+    visibility: visible !important;
+    top: 100% !important;
+    position: relative;
+    max-width: 100%;
+  }
+  
+  .sub-navigation a {
+    text-align: center;
+  }
+  
+  .sub-navigation ul li.active a {
+    background-color: #e5e5e5;
+    border-bottom: 2px solid #333333;
+  }   
+  
+}
+
+
+

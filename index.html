@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Page</title>
+<link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            margin: 0;
+        }
+        
+        .main-menu {
+            background-color: #f2f2f2;
+            padding: 10px;
+        }
+        
+        .main-menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        .main-menu ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        
+        .main-menu ul li.selected a {
+            background-color: #ddd;
+        }
+        
+        .main-menu ul li a {
+            display: block;
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+        }
+        
+        .main-menu ul li a:hover {
+            background-color: #ddd;
+        }
+        
+        .sub-navigation {
+            background-color: #f9f9f9;
+            padding: 10px;
+        }
+        
+        .sub-navigation ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-start; /* Align submenu to the left */
+        }
+        
+        .sub-navigation ul li {
+            margin-bottom: 5px;
+            margin-right: 10px;
+        }
+        
+        .sub-navigation ul li.active a {
+            background-color: #e5e5e5;
+            border-bottom: 2px solid #333333;
+        }
+        
+        .sub-navigation ul li a {
+            display: block;
+            padding: 5px;
+            color: #666;
+            text-decoration: none;
+        }
+        
+        .sub-navigation ul li a:hover {
+            background-color: #eee;
+        }
+        
+        main {
+            padding: 20px;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+</head>
+<body>
+<nav class="main-menu">
+<ul>
+<li><a href="#">Homepage</a></li>
+<li><a href="#">News</a></li>
+<li><a href="#">Competitions</a></li>
+<li><a href="#">Teams</a></li>
+<li><a href="#">Players</a></li>
+<li><a href="#">About Us</a></li>
+</ul>
+</nav>
+<header>
+<h1>My Page</h1>
+</header>
+<nav class="sub-navigation">
+<ul>
+<li><a href="#">Option 1</a></li>
+<li><a href="#">Option 2</a></li>
+<li><a href="#">Option 3</a></li>
+<li><a href="#">Option 4</a></li>
+<li><a href="#">Option 5</a></li>
+<li class="active"><a href="#">Option 6</a></li>
+</ul>
+</nav>
+<main>
+<h2>Welcome to my page!</h2>
+<p>This is a sample page with a header, a menu, and some text.</p>
+</main>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var mainBtn = "<button class='main-btn'><span><i class='fa fa-bars fa-2x'></i></button>";
+      $('.main-menu').append(mainBtn);
+      
+      $('.main-btn').on('click', function(e) {
+        e.preventDefault();
+        $('.main-menu ul').toggleClass('open');
+      })
+    });
+</script>
+</body>
+</html>
